@@ -1,13 +1,35 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/kk/ko",
+    "pages/kk/kk"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "iShow",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
   },
-  "sitemapLocation": "sitemap.json"
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "HOME",
+      "iconPath": "resources/icons/tab1.jpeg",
+      "selectedIconPath": "resources/icons/tab1.jpeg"
+    },
+    {
+      "pagePath": "pages/logs/logs",
+      "text": "MINE",
+      "iconPath": "resources/icons/tab2.jpeg",
+      "selectedIconPath": "resources/icons/tab2.jpeg"
+    },
+    {
+      "pagePath": "pages/kk/kk",
+      "text": "KK",
+      "iconPath": "resources/icons/tab1.jpeg",
+      "selectedIconPath": "resources/icons/tab1.jpeg"
+    }]
+  }
 }

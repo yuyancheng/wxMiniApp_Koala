@@ -16,6 +16,12 @@ Page({
     })
   },
   onLoad: function () {
+    wx.request({
+      url: 'https://easy-mock.com/mock/5cb5aa916ce53b13c5ddae0f/bilibili/default/getTabs',
+      success: (dt) => {
+        console.log(dt.data);
+      }
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -42,9 +48,6 @@ Page({
         }
       })
     }
-
-    //
-    this.getTabs();
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -53,17 +56,5 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  },
-
-  /**
-   * 获取导航tabs数据
-   */
-  getTabs() {
-    wx.request({
-      url: 'https://www.easy-mock.com/mock/5cb5aa916ce53b13c5ddae0f/bilibili/default/getTabs',
-      success(res) {
-        console.log(res);
-      }
-    });
   }
 })
